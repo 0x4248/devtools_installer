@@ -1,0 +1,9 @@
+# Devtools installer
+# A simple program to select and install packages with a terminal menu interface.
+# Github: https://www.github.com/0x4248/devtools_installer
+# Licence: GNU General Public License v3.0
+# By: 0x4248
+
+.DS_Store
+.config
+.config.old

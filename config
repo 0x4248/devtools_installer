@@ -1,0 +1,221 @@
+# Devtools installer
+# A simple program to select and install packages with a terminal menu interface.
+# Github: https://www.github.com/0x4248/devtools_installer
+# Licence: GNU General Public License v3.0
+# By: 0x4248
+
+menu "Text Editors"
+config vim
+    bool "Vim text editor"
+    default y
+    help
+        Vim is a highly configurable text editor built to enable efficient text editing.
+
+config neovim
+    bool "Neovim text editor"
+    default y
+    help
+        Neovim is a hyperextensible text editor based on Vim.
+
+config emacs
+    bool "Emacs text editor"
+    default n
+    help
+        Emacs is a highly extensible text editor that is built around a self-documenting, real-time display editor.
+
+config nano
+    bool "Nano text editor"
+    default y
+    help
+        Nano is a simple text editor that is designed to be easy to use.
+endmenu
+
+menu "Version Control Systems"
+
+config git
+    bool "Git"
+    default y
+    help
+        Git is a distributed version control system that is used to track changes in source code during software development.
+
+config subversion
+    bool "Subversion"
+    default y
+    help
+        Subversion is a centralized version control system that is used to track changes in source code during software development.
+
+config mercurial
+    bool "Mercurial"
+    default y
+    help
+        Mercurial is a distributed version control system that is used to track changes in source code during software development.
+
+endmenu
+
+menu "Build Tools"
+
+config make
+    bool "Make"
+    default y
+    help
+        Make is a build automation tool that is used to build executable programs and libraries from source code.
+
+config cmake
+    bool "CMake"
+    default y
+    help
+        CMake is a cross-platform build system that is used to build, test, and package software.
+
+config ninja-build
+    bool "Ninja"
+    default y
+    help
+        Ninja is a small build system that is used to build executables and libraries from source code.
+
+endmenu
+
+menu "C/C++ Compilers"
+
+config GNU_toolchain
+    bool "GNU Toolchain"
+    default y
+    help
+        The GNU Toolchain is a collection of tools that are used to compile and link C and C++ programs.
+
+
+config gcc
+    bool "GCC"
+    default y if GNU_toolchain
+    depends on GNU_toolchain
+    help
+        GCC is a compiler collection that is used to compile C and C++ programs.
+
+config c_PLUS__PLUS_
+    bool "G++"
+    default y if GNU_toolchain
+    depends on GNU_toolchain
+    help
+        G++ is a compiler that is used to compile C++ programs.
+
+config gdb
+    bool "GDB"
+    default y if GNU_toolchain
+    depends on GNU_toolchain
+    help
+        GDB is a debugger that is used to debug C and C++ programs.
+
+endmenu
+
+menu "Python Tools"
+
+config python3
+    bool "Python 3"
+    default y
+    help
+        Python is a high-level programming language that is used for general-purpose programming.
+
+config python3-pip
+    bool "Pip 3"
+    default y
+    help
+        Pip is a package manager for Python that is used to install and manage Python packages.
+    
+config python3-venv
+    bool "Python 3 Virtual Environment"
+    default n
+    help
+        Python 3 Virtual Environment is a tool that is used to create isolated Python environments.
+
+endmenu
+
+menu "Java Tools"
+
+config openjdk-17-jdk
+    bool "OpenJDK"
+    default y
+    help
+        OpenJDK is an open-source implementation of the Java Platform, Standard Edition.
+
+config maven
+    bool "Maven"
+    default y
+    help
+        Maven is a build automation tool that is used to manage Java projects.
+
+config gradle
+    bool "Gradle"
+    default y
+    help
+        Gradle is a build automation tool that is used to manage Java projects.
+endmenu
+
+menu "NodeJS"
+
+config nodejs
+    bool "NodeJS"
+    default y
+    help
+        Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+
+config npm
+    bool "NPM"
+    default y
+    help
+        NPM is a package manager for Node.js packages.
+endmenu
+
+menu "Tools"
+
+config curl
+    bool "Curl"
+    default y
+    help
+        Curl is a command-line tool that is used to transfer data with URLs.
+
+config wget
+    bool "Wget"
+    default y
+    help
+        Wget is a command-line tool that is used to download files from the web.
+
+config htop
+    bool "Htop"
+    default y
+    help
+        Htop is an interactive process viewer that is used to monitor system resources.
+
+config tree
+    bool "Tree"
+    default y
+    help
+        Tree is a command-line tool that is used to display the directory structure of a file system.
+
+endmenu
+
+menu "Shells"
+
+config bash
+    bool "Bash"
+    default y
+    help
+        Bash is a shell and command language interpreter that is used to execute commands.
+
+config zsh
+    bool "Zsh"
+    default y
+    help
+        Zsh is a shell that is used to execute commands.
+
+config fish
+    bool "Fish"
+    default y
+    help
+        Fish is a shell that is used to execute commands.
+
+config tmux
+    bool "Tmux"
+    default y
+    help
+        Tmux is a terminal multiplexer that is used to manage multiple terminal sessions.
+
+endmenu
